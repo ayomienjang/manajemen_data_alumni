@@ -1,0 +1,186 @@
+/* ==========================================
+   1. RESET STYLING & CORE DEFAULT
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================
+   2. BODY LAYOUT & BACKGROUND GEDUNG
+   ========================================== */
+body {
+    /* Menggunakan background gambar gedung sekolah meluncur penuh di layar */
+    background-image: url('../assets/sekolah_telkom.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Mengunci posisi card tepat berada di tengah-tengah layar monitor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tinggi pas seukuran jendela browser */
+    margin: 0;
+    overflow: hidden; /* Mengunci layar agar tidak bisa di-scroll sama sekali */
+}
+
+/* ==========================================
+   3. CARD BOX LOGIN (EFEK SEMI-TRANSPARAN)
+   ========================================== */
+.login-card {
+    /* Desain kartu putih transparan dengan efek blur kaca di belakangnya */
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 20px 30px; /* Jarak ruang dalam card dibuat lebih ramping dan pendek */
+    border-radius: 30px; /* Sudut melengkung bulat manis pada kartu */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Efek bayangan lembut di sekeliling kartu */
+    width: 90%; 
+    max-width: 380px; /* Lebar maksimal box agar terlihat proporsional */
+    text-align: center;
+    backdrop-filter: blur(5px); /* Memberikan efek blur estetik pada background gedung */
+}
+
+/* Wadah logo sekolah di bagian atas */
+.logo-container img {
+    width: 60px; /* Ukuran logo dibuat minimalis dan ramping */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Judul utama form login */
+h2 {
+    font-size: 20px; 
+    color: #333;
+    margin: 5px 0 2px 0;
+    font-weight: bold;
+}
+
+/* Sub-judul atau teks keterangan di bawah judul */
+.subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px; 
+}
+
+/* ==========================================
+   4. PESAN NOTIFIKASI ERROR BACKEND
+   ========================================== */
+/* Kotak peringatan jika salah memasukkan username atau password */
+.error-box {
+    color: #dc2626; /* Teks berwarna merah tegas */
+    background: #fee2e2; /* Background merah muda pastel */
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #fecaca;
+}
+
+/* ==========================================
+   5. STYLING ELEMEN INPUT & LABEL FORM
+   ========================================== */
+.form-group {
+    text-align: left;
+    margin-bottom: 10px; /* Jarak antar baris input dibuat lebih rapat dan padat */
+}
+
+/* Teks label penanda kolom input */
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+/* Mengatur bentuk seluruh kolom input teks dan select dropdown */
+input, select {
+    width: 100%;
+    padding: 10px 15px; 
+    border: 1px solid #e2e8f0;
+    border-radius: 12px; /* Membuat sudut kolom input melengkung rapi */
+    background-color: #f8fafc; 
+    outline: none;
+    font-size: 13px;
+    transition: all 0.3s ease; /* Transisi halus saat kolom diklik */
+    height: 40px; /* Tinggi kolom input dibuat ramping */
+}
+
+/* Efek visual ketika kolom input sedang diklik atau aktif (Focus) */
+input:focus, select:focus {
+    border-color: #0056b3; /* Garis tepi berubah menjadi biru */
+    background-color: #ffffff; /* Warna background input menjadi putih bersih */
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1); /* Efek cahaya biru transparan di sekeliling input */
+}
+
+/* ==========================================
+   6. BUTTON GROUP (TATA LETAK TOMBOL AKSI)
+   ========================================== */
+.button-group {
+    display: flex;
+    gap: 10px; /* Jarak jeda di antara kedua tombol */
+    margin-top: 10px;
+}
+
+/* --- TOMBOL UTAMA (LOGIN / REGISTER) --- */
+.btn-primary {
+    flex: 1; /* Lebar otomatis membagi ruang seimbang dengan tombol batal */
+    padding: 12px; 
+    background-color: #5a5e61; /* Warna dasar abu-abu netral */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efek hover ketika kursor diarahkan ke tombol utama */
+.btn-primary:hover {
+    background-color: #ce1212; /* Berubah menjadi warna merah khas Telkom */
+}
+
+/* --- TOMBOL KEMBALI / BATAL --- */
+.btn-batal {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #e2e8f0; /* Warna dasar abu-abu terang */
+    color: #475569;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+/* Efek hover ketika kursor diarahkan ke tombol batal */
+.btn-batal:hover {
+    background-color: #cbd5e1;
+    color: #1e293b;
+}
+
+/* ==========================================
+   7. TEKS FOOTER (LINK REGISTRASI / LOGIN)
+   ========================================== */
+/* Teks ajakan untuk berpindah halaman di bagian paling bawah kartu */
+.footer-text {
+    margin-top: 15px; 
+    font-size: 12px;
+    color: #888;
+}
+
+/* Pengaturan warna link teks tautan berpindah halaman */
+.footer-text a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}

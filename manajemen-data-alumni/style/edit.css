@@ -1,0 +1,135 @@
+/* ==========================================
+   1. RESET STYLING & CORE UTAMA
+   ========================================== */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #074799; /* Latar belakang halaman (Biru Pekat sesuai dashboard) */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   2. BOX / CARD FORM EDIT DATA
+   ========================================== */
+.login-card, .box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px; /* Sudut melengkung halus pada box */
+    width: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Efek bayangan lembut di sekeliling card */
+    text-align: center;
+}
+
+/* Judul utama di dalam form */
+.login-card h2, .box h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Sub-judul atau deskripsi singkat di bawah h2 */
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   3. STYLING FORM GROUP & LABEL INPUT
+   ========================================== */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Teks label penanda kolom input */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ==========================================
+   4. PERBAIKAN KOLOM INPUT & DROPDOWN JURUSAN
+   ========================================== */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    display: block;
+    background-color: #f9f9f9;
+    height: 45px; /* Menyamakan tinggi elemen select dengan input teks lainnya */
+}
+
+/* Efek saat kolom input diklik atau sedang aktif (Focus) */
+input:focus, select:focus {
+    outline: none;
+    border-color: #074799; /* Berubah menjadi biru pekat saat aktif */
+    background-color: #fff;
+}
+
+/* ==========================================
+   5. STYLING BUTTON GROUP (TATA LETAK TOMBOL)
+   ========================================== */
+.button-group {
+    display: flex;
+    gap: 10px; /* Jarak antara tombol Simpan dan tombol Batal */
+    margin-top: 25px;
+}
+
+/* --- TOMBOL SIMPAN / UPDATE --- */
+.btn-primary, button[name="update"] {
+    flex: 1; /* Lebar tombol otomatis membagi rata ruang */
+    background-color: #074799; 
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s; /* Efek transisi halus saat di-hover */
+}
+
+/* Efek ketika kursor diarahkan ke tombol simpan */
+.btn-primary:hover, button[name="update"]:hover {
+    background-color: #053a7a; /* Warna biru berubah sedikit lebih gelap */
+}
+
+/* --- TOMBOL BATAL / KEMBALI --- */
+.btn-batal {
+    flex: 1; /* Lebar tombol otomatis membagi rata ruang */
+    background-color: #f1f1f1; 
+    color: #555;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: 1px solid #ddd;
+}
+
+/* Efek ketika kursor diarahkan ke tombol batal */
+.btn-batal:hover {
+    background-color: #e4e4e4;
+    color: #333;
+}

@@ -1,0 +1,146 @@
+/* ==========================================
+   1. RESET STYLING & CORE DEFAULT
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================
+   2. BODY LAYOUT & BACKGROUND HALAMAN
+   ========================================== */
+body {
+    background-color: #ce1212; /* Warna latar belakang merah solid Telkom */
+    height: 100vh; /* Mengunci tinggi halaman seukuran layar monitor */
+    display: flex;
+    justify-content: center; /* Memosisikan box form tepat di tengah secara horizontal */
+    align-items: center; /* Memosisikan box form tepat di tengah secara vertikal */
+}
+
+/* ==========================================
+   3. CONTAINER BOX FORM (CARD PUTIH)
+   ========================================== */
+.box {
+    background-color: white;
+    width: 400px; /* Lebar kotak form tambah data */
+    padding: 40px; /* Jarak ruang di dalam kotak */
+    border-radius: 30px; /* Sudut melengkung bulat halus pada box */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Bayangan lembut agar box terlihat timbul */
+    text-align: center;
+}
+
+/* Judul utama form tambah data (h2) */
+h2 {
+    color: #333;
+    margin-bottom: 25px; /* Jarak antara judul dan elemen form di bawahnya */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   4. LAYOUT FORM & FORM GROUP
+   ========================================== */
+form {
+    display: flex;
+    flex-direction: column; /* Mengatur susunan input agar berderet ke bawah */
+    gap: 15px; /* Jarak seragam antar kelompok input */
+}
+
+/* Pembungkus label dan input agar struktur teks rapi */
+.form-group {
+    text-align: left; /* PERBAIKAN: Menjaga seluruh label tetap rata kiri */
+}
+
+/* Gaya teks label penunjuk input */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* Jarak antara teks label dengan kolom inputnya */
+    padding-left: 5px;
+}
+
+/* ==========================================
+   5. STYLING INPUT & DROPDOWN (SERAGAM 48PX)
+   ========================================== */
+/* Mengatur semua jenis kolom input teks, angka, tanggal, dan select dropdown */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px; /* Sudut melengkung pada kolom input */
+    font-size: 14px;
+    outline: none;
+    background-color: #f8fafc;
+    height: 48px; /* PERBAIKAN: Tinggi seragam 48px agar dropdown select tidak beda sendiri */
+    display: block;
+    transition: 0.3s ease; /* Transisi halus saat warna berubah */
+}
+
+/* Efek visual ketika kolom input diklik atau sedang aktif (Focus) */
+input:focus, select:focus {
+    border-color: #0056b3; /* Garis tepi berubah menjadi biru */
+    background-color: #ffffff; /* Latar belakang input menjadi putih bersih */
+}
+
+/* ==========================================
+   6. STYLING BUTTON GROUP (TATA LETAK TOMBOL)
+   ========================================== */
+/* Pembungkus untuk menyejajarkan tombol Simpan dan Batal kesamping */
+.button-group {
+    display: flex;
+    gap: 12px; /* Jarak jeda di antara kedua tombol */
+    margin-top: 15px;
+}
+
+/* --- TOMBOL SIMPAN / SAVE --- */
+.btn-save {
+    flex: 1.5; /* Proporsi tombol simpan dibuat sedikit lebih lebar */
+    background-color: #5a5e61; /* Warna dasar abu-abu netral */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    height: 48px; /* Tinggi disamakan dengan inputan */
+}
+
+/* --- TOMBOL BATAL / CANCEL --- */
+.btn-cancel {
+    flex: 1; /* Proporsi tombol batal */
+    background-color: #edf2f7; /* Warna dasar abu-abu terang */
+    color: #4a5568;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memosisikan teks "Batal" pas di tengah tombol */
+    transition: 0.3s;
+    border: 1px solid #e2e8f0;
+    height: 48px; /* Tinggi disamakan dengan inputan */
+}
+
+/* ==========================================
+   7. HOVER EFFECT ANTIMANIS (EFEK INTERAKSI)
+   ========================================== */
+/* Efek saat kursor diarahkan ke tombol Simpan */
+.btn-save:hover { 
+    background-color: #ce1212; /* Berubah menjadi merah solid khas Telkom saat di-hover */
+}
+
+/* Efek saat kursor diarahkan ke tombol Batal */
+.btn-cancel:hover { 
+    background-color: #e2e8f0; /* Berubah menjadi abu-abu sedikit lebih gelap */
+}
